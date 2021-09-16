@@ -1,0 +1,32 @@
+{
+  "name": "blogshepelnet",
+  "version": "0.1.1",
+  "private": true,
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "rm -rf docs && gulp build && cp CNAME docs/CNAME && cp robots.txt docs/robots.txt"
+  },
+  "author": "Shepel",
+  "license": "UNLICENSED",
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel-minify": "^0.5.1",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-file-include": "^2.3.0",
+    "gulp-footer": "^2.0.2",
+    "gulp-header": "^2.0.9",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^6.0.1"
+  }
+}
