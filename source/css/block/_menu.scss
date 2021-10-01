@@ -4,27 +4,32 @@
     &__burger {
         position: fixed;
         left: 0;
-        top: 0;
+        top: 32px;
+        border-right: 1px solid rgba(var(--color_cyan), 1);
+        border-top: 1px solid rgba(var(--color_cyan), 1);
+        border-bottom: 1px solid rgba(var(--color_cyan), 1);
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
 
-        svg {
-            stroke: none;
-            fill: rgba(var(--color_white), 1);
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
+        &_sym {
+            color: rgba(var(--color_cyan), 1);
         }
     }
 
     &__panel {
-        background-color: rgba(var(--color_dark), 1);
+        background-color: rgba(var(--color_black), 0.5);
         color: rgba(var(--color_white), 1);
         position: fixed;
         left: -310px;
         top: 0;
         height: 100vh;
         width: 300px;
-        box-shadow: -5px 5px 10px 0px rgba(var(--color_black), 0.1), inset 5px -5px 10px 0px rgba(var(--color_black), 0.1), inset -5px 5px 5px 0px rgba(var(--color_white), 0.06);
         transition: .3s;
+        border-right: 1px solid rgba(var(--color_cyan), 1);
 
         &.show {
             left: 0;

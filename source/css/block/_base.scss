@@ -15,11 +15,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(var(--color_gray), 0.6)
+    background-color: rgba(var(--color_violet), 0.6)
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(var(--color_gray), 0.8);
+    background-color: rgba(var(--color_violet), 0.8);
 }
 
 * {
@@ -27,7 +27,7 @@
 }
 
 body {
-    background-color: rgba(var(--color_dark), 1);
+    background-color: rgba(var(--color_purple), 1);
 }
 
 #example {
