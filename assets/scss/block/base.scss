@@ -6,7 +6,7 @@
 }
 
 ::-webkit-resizer {
-  background-color: $color_white;
+  background-color: rgb(var(--color_white));
   opacity: 0.2;
 }
 
@@ -16,12 +16,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color_gray;
+  background-color: rgb(var(--color_gray));
   opacity: 0.6;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: $color_gray;
+  background-color: rgb(var(--color_gray));
   opacity: 0.8;
 }
 
@@ -31,6 +31,35 @@
 }
 
 html {
-  background-color: $color_dark;
-  color: $color_white;
+  background-color: rgb(var(--color_dark));
+  color: rgb(var(--color_white));
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+blockquote {
+  background-color: rgba(var(--color_white), 0.1);
+  padding: 8px 16px;
 }

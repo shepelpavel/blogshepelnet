@@ -21,20 +21,19 @@ export default {
     GroupsMenu,
   },
   async asyncData({ $content }) {
-    const articles = await $content({ deep: true })
+    const articles = await $content('linux', { deep: true })
       .only(['title', 'description', 'createdAt', 'slug', 'path'])
       .fetch()
     return { articles }
   },
   head() {
     return {
-      title: 'Бложек',
+      title: 'Статьи про Linux',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content:
-            'Сельским языком про кибернетические технологии, IT и прочую компьютерную бесовщину. Внимательный будь! Если не будешь внимательный, не выкупишь слои повествования.',
+          content: 'Статьи про Linux',
         },
       ],
     }

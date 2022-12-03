@@ -1,8 +1,10 @@
-$color_black: #000000;
-$color_dark: #05070f;
-$color_gray: #666666;
-$color_light: #cccccc;
-$color_white: #ffffff;
-$color_yellow: #FFFF00;
-$color_magenta: #FF00FF;
-$color_cyan: #00FFFF;
+:root {
+  --color_black: 0, 0, 0;
+  --color_dark: 33, 34, 44;
+  --color_gray: 33, 34, 44;
+  --color_light: 204, 204, 204;
+  --color_white: 255, 255, 255;
+  --color_yellow: 255, 255, 0;
+  --color_magenta: 255, 0, 255;
+  --color_cyan: 0, 255, 255;
+}
