@@ -64,7 +64,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vue-agile'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -100,11 +100,14 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    liveEdit: false,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     assetsPublicPath: '/',
-    assetsSubDirectory: 'static'
+    assetsSubDirectory: 'static',
+    transpile: ['vue-agile'],
   },
 }

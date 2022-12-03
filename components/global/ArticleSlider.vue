@@ -1,8 +1,10 @@
 <template>
-  <div class="article-slider" v-if="images.length > 0">
-    <div v-for="image of images" :key="image.src">
-      <v-img :src="image.src" :alt="image.alt" :title="image.alt"></v-img>
-    </div>
+  <div v-if="images.length > 0" class="article-slider">
+    <agile :options="options">
+      <div v-for="image of images" :key="image.src" class="slide">
+        <v-img :src="image.src" :alt="image.alt" :title="image.alt"></v-img>
+      </div>
+    </agile>
   </div>
 </template>
 <script>
@@ -14,11 +16,55 @@ export default {
       default: () => [],
     },
   },
+  data() {
+    return {
+      options: {
+        autoplay: false,
+        fade: false,
+        centerMode: true,
+        dots: true,
+        navButtons: true,
+        slidesToShow: 1,
+      },
+    }
+  },
 }
 </script>
 
 <style lang="scss">
 .article-slider {
   max-width: 800px;
+  margin: 24px auto 28px;
+  .agile {
+    &__actions {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &__dots {
+      position: absolute;
+      left: 0;
+      bottom: -16px;
+      width: 100%;
+      height: 16px;
+      justify-content: center;
+    }
+    &__dot {
+      button {
+        width: 18px;
+        height: 8px;
+        margin: 0 3px;
+        background-color: rgba(var(--color_white), 0.4);
+        transform: skewX(-30deg);
+      }
+      &--current {
+        button {
+          background-color: rgba(var(--color_white), 0.8);
+        }
+      }
+    }
+  }
 }
 </style>
