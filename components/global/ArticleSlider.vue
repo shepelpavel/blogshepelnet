@@ -1,10 +1,19 @@
 <template>
-  <div v-if="images && images.length > 0" class="article-slider">
-    <agile :options="options">
-      <div v-for="image of images" :key="image.src" class="slide">
-        <v-img :src="image.src" :alt="image.alt" :title="image.alt"></v-img>
-      </div>
-    </agile>
+  <div>
+    <div v-if="images && images.length > 1" class="article-slider">
+      <agile :options="options">
+        <div v-for="image of images" :key="image.src" class="slide">
+          <v-img :src="image.src" :alt="image.alt" :title="image.alt"></v-img>
+        </div>
+      </agile>
+    </div>
+    <div v-if="images && images.length == 1" class="article-slider">
+      <v-img
+        :src="images[0].src"
+        :alt="images[0].alt"
+        :title="images[0].alt"
+      ></v-img>
+    </div>
   </div>
 </template>
 <script>
