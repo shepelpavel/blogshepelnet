@@ -1,5 +1,5 @@
 <template>
-  <div v-if="images.length > 0" class="article-slider">
+  <div v-if="images && images.length > 0" class="article-slider">
     <agile :options="options">
       <div v-for="image of images" :key="image.src" class="slide">
         <v-img :src="image.src" :alt="image.alt" :title="image.alt"></v-img>

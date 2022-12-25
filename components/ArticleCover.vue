@@ -18,9 +18,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-.article-cover {
-  max-width: 800px;
-}
-</style>

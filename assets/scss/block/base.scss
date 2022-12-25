@@ -33,14 +33,22 @@
 html {
   background-color: rgb(var(--color_black));
   color: rgb(var(--color_white));
-  min-height: 100vh;
 }
 
 body {
-  min-height: 100vh;
-  background-image: url('/img/style/textured.png');
-  background-repeat: repeat;
-  background-position: left top;
+  position: relative;
+  &::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/style/textured.png');
+    background-repeat: repeat;
+    background-position: left top;
+    z-index: -1;
+  }
 }
 
 h1 {
